@@ -15,6 +15,30 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="./css/settings.css">
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131211058-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131211058-2');
+  </script>
+  <script>
+    /**
+    * (from Google Analytics)
+    * Function that captures a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var captureOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
+    </script>
 </head>
 
 <body>
@@ -30,15 +54,16 @@
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="hero-content">
-            <h1>Run Detectron in a single API Call</h1>
-            <p>Simplify your data labelling process and solve your image detection needs using our fully configurable API. Built for academia by academia. 
+            <h1>Run HuggingFace or Detectron with one API call.</h1>
+            <p>No GPU required. No fiddling with CUDA. Simplify your modeling process using our fully functonal API.
             </p>
             <div class="hero-form">
-              <form action="">
+              <form action="https://formsubmit.co/mlresearchtools@gmail.com" method="post">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Email Me When Ready">
-                  <button class="submit-btn">Get Started</button>
+                  <input type="email" class="form-control" name="email" placeholder="Join the waitlist">
+                  <button type="submit" class="submit-btn">Sign Up</button>
                 </div>
+                <p class="form-text"><i class="icon icon-lock"></i>Your data is protected. We never spam in your inbox</p>
               </form>
             </div>
           </div>
@@ -55,7 +80,7 @@
           </div>
       <div class="container">
           <div class="section-title text-center">
-              <h2>Focus on your research - we'll handle the rest</h2>
+              <h2>The easiest way to run state-of-the-art AI</h2>
           </div>
           <div class="row mb-d-30">
               <div class="col-md-6 col-lg-4 mb--30">
@@ -64,8 +89,8 @@
                           <i class="icon icon-users-mm"></i>
                       </div>
                       <div class="card-content">
-                          <h3>Easy</h3>
-                          <p>We setup and handle all of the hosting and server requirements so all you have to do is call our API.</p>
+                          <h3>Powerful</h3>
+                          <p>Our machines are equipped to handle the largest models (e.g. Transformer-XL, GPT2-XL) so you save time setting up the infrastructure or cloud plan yourself.</p>
                       </div>
                   </div>
               </div>
@@ -76,7 +101,7 @@
                       </div>
                       <div class="card-content">
                           <h3>Efficient</h3>
-                          <p>Skip the lengthy and confusing configuration process and spend an hour prepping your data, not a week.</p>
+                          <p>Run your current Python code with our infrastructure in just a few lines of code, or easily run large NLP/CV models on lightweight machines.</p>
                       </div>
                   </div>
               </div>
@@ -86,8 +111,8 @@
                           <i class="icon icon-settings"></i>
                       </div>
                       <div class="card-content">
-                          <h3>Reliable</h3>
-                          <p>Accessible 24/7, 365 days a years. Garunteed uptime.</p>
+                          <h3>Quick</h3>
+                          <p>We setup and handle all of the hosting and server requirements so all you have to do is call our API.</p>
                       </div>
                   </div>
               </div>
@@ -105,16 +130,15 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-xl-8">
                     <div class="footer-newsletter-content">
-                        <h2>Start Better Spending Your Time - Now </h2>
-                        <p>We've developed and hosted our service to ensure you have an easy, up to date, reliable, and consistent performance every single time.</p>
+                        <h2>Cut down on hours of setup and expensive equipment.</h2>
                     </div>
                 </div>
                 <div class="col-lg-7 col-xl-6">
                     <div class="footer-newsletter-form">
-                      <form action="">
+                      <form action="https://formsubmit.co/mlresearchtools@gmail.com" method="post">
                             <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Email Me When Ready">
-                              <button class="submit-btn">Get Started</button>
+                              <input type="email" class="form-control" name="email" placeholder="Join the waitlist">
+                              <button type="submit" class="submit-btn">Sign Up</button>
                             </div>
                             <p class="form-text"><i class="icon icon-lock"></i>Your data is protected. We never spam in your inbox</p>
                       </form>
@@ -137,10 +161,10 @@
                         <h6>Help Menu</h6>
                       </div>
                       <ul class="footer-list">
-                        <li><a href="">About</a></li>
-                        <li><a href="">Features</a></li>
-                        <li><a href="">Works</a></li>
-                        <li><a href="">Career</a></li>
+                        <li><a href="mailto:jzda@cs.washington.edu" onclick="captureOutboundLink('about'); return false;">About</a></li>
+                        <li><a href="mailto:jzda@cs.washington.edu" onclick="captureOutboundLink('features'); return false;">Features</a></li>
+                        <li><a href="mailto:jzda@cs.washington.edu" onclick="captureOutboundLink('pricing'); return false;">Pricing</a></li>
+                        <li><a href="mailto:jzda@cs.washington.edu" onclick="captureOutboundLink('careers'); return false;">Careers</a></li>
                       </ul>
                 </div>
             </div> 
@@ -150,26 +174,13 @@
                         <h6>Support</h6>
                       </div>
                       <ul class="footer-list">
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Help & Support</a></li>
-                        <li><a href="">Privacy Policy</a></li>
-                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="mailto:jzda@cs.washington.edu" onclick="captureOutboundLink('contact'); return false;">Contact</a></li>
+                        <li><a href="mailto:jzda@cs.washington.edu" onclick="captureOutboundLink('helpandsupport'); return false;">Help & Support</a></li>
+                        <li><a href="mailto:jzda@cs.washington.edu" onclick="captureOutboundLink('privacypolicy'); return false;">Privacy Policy</a></li>
+                        <li><a href="mailto:jzda@cs.washington.edu" onclick="captureOutboundLink('termsandconditions'); return false;">Terms & Conditions</a></li>
                       </ul>
                 </div>
-            </div>  
-            <div class="col-lg-2 col-sm-4 col-margin">
-                <div class="single-footer">
-                    <div class="footer-title">
-                        <h6>Products</h6>
-                      </div>
-                      <ul class="footer-list">
-                        <li><a href=""> Shades Pro</a></li>
-                        <li><a href="">Essential Blocks</a></li>
-                        <li><a href="">Avasta Dash</a></li>
-                        <li><a href="">vApp Landing Page</a></li>
-                      </ul>
-                </div>
-            </div> 
+            </div>
           </div>
     </div>
   </div>
